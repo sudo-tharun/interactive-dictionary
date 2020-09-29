@@ -10,6 +10,8 @@ json
 
 Download data.json file from the repository to read dictionary data.
 The program is executed in Python 3 environment and the above commands are for Windows.
+The audio file will be created within the folder of code.
+An extension can be done using the paths of the file.
 
 Blog: https://techprodezza.code.blog/
  
