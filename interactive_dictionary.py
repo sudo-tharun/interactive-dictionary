@@ -4,9 +4,13 @@ from difflib import get_close_matches
 from playsound import playsound
 
 def tts(text):
+    #calling gTTS method
     conv=gTTS(text,lang='en',slow=False)
+    #saving the text to a file
     conv.save("speech.mp3")
+    #play the saved file
     playsound("speech.mp3")
+    #remove the file to avoid overwriting of files
     os.remove("speech.mp3")
 
 #load JSON data
@@ -65,7 +69,7 @@ def getMeaning(w):
         cont_search()
         return "The word doesn't exist. Please double check it."
 
-
+#method to continue search
 def cont_search():
     print("\nDo you want to continue search? 1. Yes 2. No")
     tts("Do you want to continue search? Enter 1. if Yes 2. if No")
@@ -74,5 +78,5 @@ def cont_search():
         interactive_dict()
     else:
         return
-
+#executing main program
 interactive_dict()
